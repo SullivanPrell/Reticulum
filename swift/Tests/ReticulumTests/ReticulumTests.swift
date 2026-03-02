@@ -215,7 +215,7 @@ final class PacketTests: XCTestCase {
         XCTAssertNil(Packet.fromBytes(Data([0x00, 0x00])))
     }
 
-    func testAnnouncePakcetType() {
+    func testAnnouncePacketType() {
         let destHash = Data(repeating: 0x11, count: 16)
         let packet   = Packet(destinationHash: destHash, data: Data(), packetType: .announce)
         let bytes    = packet.toBytes()
